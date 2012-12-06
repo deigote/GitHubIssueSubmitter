@@ -1,9 +1,8 @@
+<h4><g:message code="issues.new.title" /></h4>
 <div id="create-issue">
-
 	<a href="#issueFormContainer" role="button" class="btn" data-toggle="modal">
 		<g:message code="submit.new.issue" />
 	</a>
-
 	<div id="issueFormContainer" class="modal hide fade" tabindex="-1" role="dialog"
 		aria-labelledby="issueFormContainerLabel" aria-hidden="true">
 		<div class="modal-header">

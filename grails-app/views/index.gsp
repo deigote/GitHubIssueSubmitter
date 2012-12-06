@@ -82,5 +82,6 @@
 	</head>
 	<body>
 		<g:render template="/templates/createIssueForm" />
+		<g:render template="/templates/listAllIssues" />
 	</body>
 </html>

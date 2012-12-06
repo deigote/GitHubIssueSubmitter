@@ -26,7 +26,7 @@
 					<img src="${resource(dir: 'images', file: 'tado_logo.png')}" alt="Tado"/>
 				</a>
 			</div>
-			<p><g:message code="welcome" /></p>
+			<h3><g:message code="welcome" /></h3>
 		</div>
 		<div id="content">
 			<g:layoutBody/>

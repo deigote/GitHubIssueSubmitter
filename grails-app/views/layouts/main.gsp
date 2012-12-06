@@ -14,13 +14,19 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'ghis.css')}" type="text/css">
 		<r:require modules="bootstrap"/>
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
 	<body style="margin: auto; margin-top: 3em">
 		<div id="header">
-			<div id="tadoLogo" role="banner"><a href="http://tado.com/"><img src="${resource(dir: 'images', file: 'tado_logo.png')}" alt="Tado"/></a></div>
+			<div id="tado-logo" role="banner">
+				<a href="http://tado.com/">
+					<img src="${resource(dir: 'images', file: 'tado_logo.png')}" alt="Tado"/>
+				</a>
+			</div>
+			<p><g:message code="welcome" /></p>
 		</div>
 		<div id="content">
 			<g:layoutBody/>

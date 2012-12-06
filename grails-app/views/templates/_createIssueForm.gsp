@@ -1,24 +1,34 @@
 <div id="create-issue">
 
-	<a href="#myModal" role="button" class="btn" data-toggle="modal">
+	<a href="#issueFormContainer" role="button" class="btn" data-toggle="modal">
 		<g:message code="submit.new.issue" />
 	</a>
 
-	<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true">
+	<div id="issueFormContainer" class="modal hide fade" tabindex="-1" role="dialog"
+		aria-labelledby="issueFormContainerLabel" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal"
 				aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Modal header</h3>
+			<h3 id="issueFormContainerLabel">
+				<g:message code="submit.new.issue.title" />
+			</h3>
+			<p><g:message code="submit.new.issue.description" /></p>
 		</div>
-		<div class="modal-body">
-			<p>One fine body…</p>
-		</div>
-		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close
-			</button>
-			<button class="btn btn-primary">Save changes</button>
-		</div>
+		<g:form method="POST" controller="issue" action="submitNewIssue">
+			<div class="modal-body">
+				<forms:renderInputs inputProps="${[
+					[name:'title', inputType:'textField'],
+					[name:'description', inputType:'textArea']
+				]}" />
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">
+					<g:message code="forms.close"/>
+				</button>
+				<button class="btn btn-primary">
+					<g:message code="forms.submit"/>
+				</button>
+			</div>
+		</g:form>
 	</div>
 </div>

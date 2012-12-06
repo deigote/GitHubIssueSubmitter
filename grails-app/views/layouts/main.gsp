@@ -14,15 +14,22 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		<r:require modules="bootstrap"/>
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
-	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
-		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
-		<r:layoutResources />
+	<body style="margin: auto; margin-top: 3em">
+		<div id="header">
+			<div id="tadoLogo" role="banner"><a href="http://tado.com/"><img src="${resource(dir: 'images', file: 'tado_logo.png')}" alt="Tado"/></a></div>
+		</div>
+		<div id="content">
+			<g:layoutBody/>
+		</div>
+		<div id="footer">
+			<div class="footer" role="contentinfo"></div>
+			<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+			<g:javascript library="application"/>
+			<r:layoutResources />
+		</div>
 	</body>
 </html>
